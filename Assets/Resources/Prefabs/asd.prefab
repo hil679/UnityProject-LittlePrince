@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1524797909719466317}
   - component: {fileID: 1524797909719466318}
   m_Layer: 0
-  m_Name: ShootingStar_Destroyable
+  m_Name: asd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

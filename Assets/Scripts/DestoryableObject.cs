@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DestoryableObject : MonoBehaviour
 {
-    //행성 랜덤 생성 범위 x: +-15 / y: 13~15 / z: 1~15
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +18,14 @@ public class DestoryableObject : MonoBehaviour
         //2. 생성된 별 떨어지기
     }
 
-    private void MoveStars(){
+    public void MoveStars(){
         Debug.Log("MoveStars");
 
     }
 
     private void StarDestoryed(){
-        Debug.Log("StarDestoryed");
+        //Debug.Log("StarDestoryed");
+        //Destroy(this, .5f);
 
     }
 
@@ -49,5 +49,8 @@ public class DestoryableObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         //총알과 부딪힌 경우, 땅과 부딪힌 경우
+        Debug.Log("StarDestoryed");
+        Destroy(gameObject, .5f);
+        //StarDestoryed();
     }
 }
