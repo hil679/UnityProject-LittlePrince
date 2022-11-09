@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 5194111868999320043}
   - component: {fileID: 2860330822659243890}
   - component: {fileID: 7078842815371776212}
+  - component: {fileID: 8702948443352340104}
   m_Layer: 10
   m_Name: ShootingStar_Destroyable
   m_TagString: Untagged
@@ -484,3 +485,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.02
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8702948443352340104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597927799449061387}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2f94575bf2a064bac3b9b3484922ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 3348174207652167039, guid: 00d2aafca88b04f4a9512a9fb9be1608,
+    type: 3}

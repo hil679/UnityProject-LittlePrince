@@ -7,10 +7,12 @@ public class DestoryableObject : MonoBehaviour
 
     Rigidbody rb;
     float power = 10f;
- 
+    public ParticleSystem m_System; 
+    ParticleSystem.Particle[] m_Particles; 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        m_Particles = new ParticleSystem.Particle[m_System.main.maxParticles];
     }
  
     void Update()
@@ -45,7 +47,7 @@ public class DestoryableObject : MonoBehaviour
 
     private void StarOnTheGround_Effect(){
         Debug.Log("StarOnTheGround_Effect");
-
+        StartCoroutine("OnTheGround_Effect");
     }
 
     private void StarGennerate(){
@@ -59,7 +61,24 @@ public class DestoryableObject : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         //총알과 부딪힌 경우, 땅과 부딪힌 경우
         Debug.Log("StarDestoryed");
+        StarOnTheGround_Effect();
         Destroy(gameObject, .5f);
         //StarDestoryed();
     }
+
+    IEnumerator OnTheGround_Effect ()
+	{
+		while(true)
+		{
+			yield return new WaitForSeconds(0.5f);
+			if(!m_System.IsAlive(true))
+			{
+				#if UNITY_3_5
+						m_System.gameObject.SetActiveRecursively(false);
+					#else
+						m_System.gameObject.SetActive(false);
+					#endif
+			}
+		}
+	}
 }
