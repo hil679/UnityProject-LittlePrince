@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class DestoryableObject : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    Rigidbody rb;
+    float power = 10f;
+ 
     void Start()
     {
-        
+        rb = gameObject.GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
+ 
     void Update()
     {
-        //1. 랜덤 시간마다 랜덤 위치로 별 생성하기
+           //1. 랜덤 시간마다 랜덤 위치로 별 생성하기
 
         //2. 생성된 별 떨어지기
+        // float xMove = Input.GetAxis("Horizontal");
+        // float zMove = Input.GetAxis("Vertical");
+ 
+        // Vector3 getVel = new Vector3(xMove, 0, zMove) * speed;
+        // rb.velocity = getVel;
+         rb.AddForce(Vector3.left * power);
+         rb.velocity = new Vector3(-power,-5f,0);
     }
 
     public void MoveStars(){

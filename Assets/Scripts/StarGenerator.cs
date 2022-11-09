@@ -12,14 +12,14 @@ public class StarGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-          // Instance 생성
-  	    GameObject myInstance = Instantiate(shootingStarPrefab); 
-        // position 위치 지정
-        myInstance.transform.position =  new Vector3(Random.Range(-15, 15), Random.Range(10, 15), Random.Range(3, 15));
-        // Component에 접근 
-        //myInstance.GetComponent<DestoryableObject>().MoveStars();
-        // 오브젝트를 월드상에 보이도록 설정
-        myInstance.SetActive(true);
+        //   // Instance 생성
+  	    // GameObject myInstance = Instantiate(shootingStarPrefab); 
+        // // position 위치 지정
+        // myInstance.transform.position =  new Vector3(Random.Range(-15, 15), Random.Range(10, 15), Random.Range(15, 30));
+        // // Component에 접근 
+        // //myInstance.GetComponent<DestoryableObject>().MoveStars();
+        // // 오브젝트를 월드상에 보이도록 설정
+        // myInstance.SetActive(true);
     }
 
     // Update is called once per frame
@@ -38,11 +38,16 @@ public class StarGenerator : MonoBehaviour
     }
 
     IEnumerator StarGenerate(){
-        yield return new WaitForSecondsRealtime(1.0f);
+        yield return new WaitForSecondsRealtime(0.5f);
 
         GameObject myInstance = Instantiate(shootingStarPrefab); 
         // position 위치 지정
-        myInstance.transform.position =  new Vector3(Random.Range(-15, 15), Random.Range(10, 15), Random.Range(3, 15));
+        myInstance.transform.position =  new Vector3(Random.Range(10, 30), Random.Range(8, 30), Random.Range(5, 20));
+        float SettingNum = Random.Range(1, 10);
+        myInstance.transform.localScale += new Vector3(SettingNum*10, SettingNum*10, SettingNum*10);
+        Debug.Log("setting : "+SettingNum+", 별똥별 scale : "+myInstance.transform.localScale);
+        myInstance.GetComponent<Rigidbody>().drag=SettingNum*0.2f;
+        myInstance.GetComponent<Rigidbody>().mass=3;
         // Component에 접근 
         //myInstance.GetComponent<DestoryableObject>().MoveStars();
         // 오브젝트를 월드상에 보이도록 설정

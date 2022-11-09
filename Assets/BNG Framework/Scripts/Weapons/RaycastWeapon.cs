@@ -46,13 +46,13 @@ namespace BNG {
         /// Maximum amount of internal ammo this weapon can hold. Does not account for attached clips.  For example, a shotgun has internal ammo
         /// </summary>
         [Tooltip("Current Internal Ammo if you are keeping track of ammo yourself. Firing will deduct from this number. Reloading will cause this to equal MaxInternalAmmo.")]
-        public float InternalAmmo = 0;
+        public float InternalAmmo = 9999;
 
         /// <summary>
         /// Maximum amount of internal ammo this weapon can hold. Does not account for attached clips.  For example, a shotgun has internal ammo
         /// </summary>
         [Tooltip("Maximum amount of internal ammo this weapon can hold. Does not account for attached clips.  For example, a shotgun has internal ammo")]
-        public float MaxInternalAmmo = 10;
+        public float MaxInternalAmmo = 9999;
 
         /// <summary>
         /// Set true to automatically chamber a new round on fire. False to require charging. Example : Bolt-Action Rifle does not auto chamber.  

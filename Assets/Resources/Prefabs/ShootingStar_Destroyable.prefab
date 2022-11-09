@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 7597927799449061378}
   - component: {fileID: 7597927799449061405}
   - component: {fileID: 5194111868999320043}
+  - component: {fileID: 2860330822659243890}
   - component: {fileID: 7078842815371776212}
   m_Layer: 10
   m_Name: ShootingStar_Destroyable
@@ -237,7 +238,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7597927799449061387}
   serializedVersion: 2
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -456,6 +457,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ade664c34982b0746bf886a0d59aeb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2860330822659243890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597927799449061387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3e25d0b0ada7343a5eebe13976841b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &7078842815371776212
