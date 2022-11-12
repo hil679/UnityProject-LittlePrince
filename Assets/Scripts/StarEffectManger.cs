@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StarEffect : MonoBehaviour
+public class StarEffectManger : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool playAura = true; //파티클 제어 bool
+    public ParticleSystem particleObject; //파티클시스템
+
     void Start()
     {
-        
+        playAura = true;
+        particleObject.Play();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        // if (playAura)                    
+        //     particleObject.Play();       
+        // else if (!playAura)                
+        //     particleObject.Stop();        
     }
 }
