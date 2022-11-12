@@ -927,6 +927,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShootingStar_Destroyable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8702948443352340104, guid: da81f2c8814ddb04084639d44b1aa039,
+        type: 3}
+      propertyPath: playAura
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da81f2c8814ddb04084639d44b1aa039, type: 3}
 --- !u!1001 &125328711
@@ -945,6 +950,21 @@ PrefabInstance:
         type: 3}
       propertyPath: InternalAmmo
       value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846685263277749109, guid: 338b73bca5e49f146beefdccf9811a04,
+        type: 3}
+      propertyPath: ReloadMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846685263277749109, guid: 338b73bca5e49f146beefdccf9811a04,
+        type: 3}
+      propertyPath: MaxInternalAmmo
+      value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846685263277749109, guid: 338b73bca5e49f146beefdccf9811a04,
+        type: 3}
+      propertyPath: AutoChamberRounds
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5438212931459870842, guid: 338b73bca5e49f146beefdccf9811a04,
         type: 3}
@@ -2714,6 +2734,11 @@ PrefabInstance:
       propertyPath: ReloadMethod
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3814001877043367786, guid: 22fc588c43c2f7146ab5990f2c2848cd,
+        type: 3}
+      propertyPath: MaxInternalAmmo
+      value: 9999
+      objectReference: {fileID: 0}
     - target: {fileID: 7689196106450287864, guid: 22fc588c43c2f7146ab5990f2c2848cd,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -3962,7 +3987,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336746610}
   m_LocalRotation: {x: -0, y: -0.7003118, z: -0, w: 0.7138371}
-  m_LocalPosition: {x: 1.8610001, y: 1.501, z: -2.2489998}
+  m_LocalPosition: {x: 1.8610001, y: 0.764, z: -2.2489998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4592,11 +4617,11 @@ MonoBehaviour:
   MaxRange: 25
   Damage: 25
   FiringMethod: 1
-  ReloadMethod: 1
+  ReloadMethod: 0
   FiringRate: 0.08
   BulletImpactForce: 1000
   InternalAmmo: 9999
-  MaxInternalAmmo: 15
+  MaxInternalAmmo: 9999
   AutoChamberRounds: 1
   MustChamberRounds: 1
   AlwaysFireProjectile: 0
@@ -5401,6 +5426,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896351667102617552, guid: b2defb85b986ab243a8c5252fe34a93a,
+        type: 3}
+      propertyPath: InternalAmmo
+      value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896351667102617552, guid: b2defb85b986ab243a8c5252fe34a93a,
+        type: 3}
+      propertyPath: MaxInternalAmmo
+      value: 9999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2defb85b986ab243a8c5252fe34a93a, type: 3}

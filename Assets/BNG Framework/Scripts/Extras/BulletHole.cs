@@ -10,8 +10,8 @@ namespace BNG {
     public class BulletHole : MonoBehaviour {
         public Transform BulletHoleDecal;
 
-        public float MaxScale = 1f;
-        public float MinScale = 0.75f;
+        public float MaxScale = 10f;
+        public float MinScale = 7.5f;
 
         public bool RandomYRotation = true;
 
