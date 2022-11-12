@@ -7,12 +7,15 @@ public class DestoryableObject : MonoBehaviour
 
     Rigidbody rb;
     float power = 10f;
-    public ParticleSystem m_System; 
-    ParticleSystem.Particle[] m_Particles; 
+    //public ParticleSystem WFX_3_Groud_ExplosionLandMine;
+    //public ParticleSystem WFX_19_StarTail_GazFire;
+    //public ParticleSystem WFX_4_StarDestroy_Explosion;
+    private int HitCount = 0;
+    //ParticleSystem.Particle[] m_Particles; 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
-        m_Particles = new ParticleSystem.Particle[m_System.main.maxParticles];
+        //m_Particles = new ParticleSystem.Particle[WFX_19_StarTail_GazFire.main.maxParticles];
     }
  
     void Update()
@@ -34,8 +37,30 @@ public class DestoryableObject : MonoBehaviour
 
     }
 
-    private void StarDestoryed(){
-        //Debug.Log("StarDestoryed");
+    public void StarDestoryed(Vector3 Positon){
+        HitCount++;
+        Debug.Log("This star is hit "+ HitCount+" times");
+        if (HitCount >= 3)
+        {
+            Debug.Log("It's hit more than 3 times, so destroy it");
+
+            this.gameObject.transform.Find("WFX_19_StarTail_GazFire").gameObject.SetActive(false);
+            this.gameObject.GetComponent<StarEffectManger>().WFX_6_StarDestroy_ExplosiveSmoke.gameObject.SetActive(true);
+            this.gameObject.GetComponent<StarEffectManger>().Effect_WFX_6_StarDestroy_ExplosiveSmoke();
+            this.gameObject.transform.Find("BeveledCube_0").gameObject.SetActive(false);
+            this.gameObject.transform.Find("BeveledCube_1").gameObject.SetActive(false);
+
+            Destroy(gameObject, 0.7f);
+        }
+        else
+        {
+            this.gameObject.GetComponent<StarEffectManger>().WFX_4_StarDestroy_Explosion.gameObject.transform.position = Positon;
+            this.gameObject.GetComponent<StarEffectManger>().WFX_4_StarDestroy_Explosion.gameObject.SetActive(true);
+            this.gameObject.GetComponent<StarEffectManger>().Effect_StarDestroy_Explosion();
+        }
+        
+
+        
         //Destroy(this, .5f);
 
     }
@@ -46,8 +71,14 @@ public class DestoryableObject : MonoBehaviour
     }
 
     private void StarOnTheGround_Effect(){
-        Debug.Log("StarOnTheGround_Effect");
-        StartCoroutine("OnTheGround_Effect");
+        //Debug.Log("StarOnTheGround_Effect");
+        //StartCoroutine("OnTheGround_Effect");
+        this.gameObject.transform.Find("WFX_19_StarTail_GazFire").gameObject.SetActive(false);
+        this.gameObject.GetComponent<StarEffectManger>().WFX_3_Groud_ExplosionLandMine.gameObject.SetActive(true);
+        this.gameObject.GetComponent<StarEffectManger>().Effect_WFX_3_Groud_ExplosionLandMine();
+        this.gameObject.transform.Find("BeveledCube_0").gameObject.SetActive(false);
+        this.gameObject.transform.Find("BeveledCube_1").gameObject.SetActive(false);
+        Destroy(gameObject, 0.7f);
     }
 
     private void StarGennerate(){
@@ -55,30 +86,36 @@ public class DestoryableObject : MonoBehaviour
     }
 
     private void StarGennerate_Effect(){
-        Debug.Log("StarGennerate_Effect");
+        //Debug.Log("StarGennerate_Effect");
     }
 
     private void OnCollisionEnter(Collision other) {
         //총알과 부딪힌 경우, 땅과 부딪힌 경우
-        Debug.Log("StarDestoryed");
-        StarOnTheGround_Effect();
-        Destroy(gameObject, .5f);
+
+        Debug.Log("hit item name: "+ other.gameObject.name);
+        //Debug.Log("StarDestoryed");
+        if(other.gameObject.name == "floor")
+        {
+            StarOnTheGround_Effect();
+        }
+
         //StarDestoryed();
     }
 
-    IEnumerator OnTheGround_Effect ()
-	{
-		while(true)
-		{
-			yield return new WaitForSeconds(0.5f);
-			if(!m_System.IsAlive(true))
-			{
-				#if UNITY_3_5
-						m_System.gameObject.SetActiveRecursively(false);
-					#else
-						m_System.gameObject.SetActive(false);
-					#endif
-			}
-		}
-	}
+ //   IEnumerator OnTheGround_Effect ()
+	//{
+
+ //       while (true)
+	//	{
+	//		yield return new WaitForSeconds(0.3f);
+	//		if(!WFX_19_StarTail_GazFire.IsAlive(true))
+	//		{
+	//			#if UNITY_3_5
+	//					m_System.gameObject.SetActiveRecursively(false);
+	//				#else
+	//					WFX_19_StarTail_GazFire.gameObject.SetActive(false);
+	//				#endif
+	//		}
+	//	}
+	//}
 }

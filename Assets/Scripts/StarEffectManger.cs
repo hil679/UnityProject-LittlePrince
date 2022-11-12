@@ -5,12 +5,15 @@ using UnityEngine;
 public class StarEffectManger : MonoBehaviour
 {
     public bool playAura = true; //파티클 제어 bool
-    public ParticleSystem particleObject; //파티클시스템
+    public ParticleSystem WFX_19_StarTail_GazFire;
+    public ParticleSystem WFX_4_StarDestroy_Explosion;
+    public ParticleSystem WFX_6_StarDestroy_ExplosiveSmoke;
+    public ParticleSystem WFX_3_Groud_ExplosionLandMine;
 
     void Start()
     {
         playAura = true;
-        particleObject.Play();
+        WFX_19_StarTail_GazFire.Play();
     }
 
 
@@ -21,4 +24,18 @@ public class StarEffectManger : MonoBehaviour
         // else if (!playAura)                
         //     particleObject.Stop();        
     }
+
+    public void Effect_StarDestroy_Explosion()
+    {
+        WFX_4_StarDestroy_Explosion.Play();
+    }
+    public void Effect_WFX_6_StarDestroy_ExplosiveSmoke()
+    {
+        WFX_6_StarDestroy_ExplosiveSmoke.Play();
+    }
+    public void Effect_WFX_3_Groud_ExplosionLandMine()
+    {
+        WFX_3_Groud_ExplosionLandMine.Play();
+    }
+
 }

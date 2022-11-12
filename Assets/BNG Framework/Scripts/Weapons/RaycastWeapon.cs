@@ -463,26 +463,44 @@ namespace BNG {
 
             ApplyParticleFX(hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal), hit.collider);
 
-            // push object if rigidbody
-            Rigidbody hitRigid = hit.collider.attachedRigidbody;
-            if (hitRigid != null) {
-                hitRigid.AddForceAtPosition(BulletImpactForce * MuzzlePointTransform.forward, hit.point);
-            }
+            Debug.Log(hit.collider.name);
+            Debug.Log(hit.collider.tag);
+            //DestoryableObject
+            if (hit.collider.tag == "Star")
+            {
+                Debug.Log(hit.collider.name);
+                hit.collider.GetComponent<DestoryableObject>().StarDestoryed(hit.point);
 
-            // Damage if possible
-            Damageable d = hit.collider.GetComponent<Damageable>();
-            if (d) {
-                d.DealDamage(Damage, hit.point, hit.normal, true, gameObject, hit.collider.gameObject);
+            }else
+            {
+                // push object if rigidbody
+                Rigidbody hitRigid = hit.collider.attachedRigidbody;
+                if (hitRigid != null)
+                {
+                    hitRigid.AddForceAtPosition(BulletImpactForce * MuzzlePointTransform.forward, hit.point);
 
-                if (onDealtDamageEvent != null) {
-                    onDealtDamageEvent.Invoke(Damage);
+                }
+
+                // Damage if possible
+                Damageable d = hit.collider.GetComponent<Damageable>();
+                if (d)
+                {
+                    d.DealDamage(Damage, hit.point, hit.normal, true, gameObject, hit.collider.gameObject);
+
+                    if (onDealtDamageEvent != null)
+                    {
+                        onDealtDamageEvent.Invoke(Damage);
+                    }
+                }
+
+                // Call event
+                if (onRaycastHitEvent != null)
+                {
+                    onRaycastHitEvent.Invoke(hit);
                 }
             }
 
-            // Call event
-            if (onRaycastHitEvent != null) {
-                onRaycastHitEvent.Invoke(hit);
-            }
+            
         }
 
         public virtual void ApplyParticleFX(Vector3 position, Quaternion rotation, Collider attachTo) {

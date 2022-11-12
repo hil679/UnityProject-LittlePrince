@@ -44,8 +44,11 @@ public class StarGenerator : MonoBehaviour
         // position 위치 지정
         myInstance.transform.position =  new Vector3(Random.Range(10, 30), Random.Range(8, 30), Random.Range(5, 20));
         float SettingNum = Random.Range(1, 10);
-        myInstance.transform.localScale += new Vector3(SettingNum*10, SettingNum*10, SettingNum*10);
-        Debug.Log("setting : "+SettingNum+", 별똥별 scale : "+myInstance.transform.localScale);
+        myInstance.transform.localScale += new Vector3(SettingNum*5, SettingNum*5, SettingNum*5);
+        //myInstance.transform.Find("WFX_4_StarDestroy_Explosion Small").gameObject.SetActive(false);
+        //myInstance.transform.Find("WFX_6_StarDestroy_ExplosiveSmoke").gameObject.SetActive(false);
+
+        //Debug.Log("setting : "+SettingNum+", 별똥별 scale : "+myInstance.transform.localScale);
         myInstance.GetComponent<Rigidbody>().drag=SettingNum*0.2f;
         myInstance.GetComponent<Rigidbody>().mass=3;
         // Component에 접근 
