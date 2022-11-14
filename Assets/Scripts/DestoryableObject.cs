@@ -7,14 +7,15 @@ public class DestoryableObject : MonoBehaviour
 
     Rigidbody rb;
     float power = 10f;
-    //public ParticleSystem WFX_3_Groud_ExplosionLandMine;
-    //public ParticleSystem WFX_19_StarTail_GazFire;
-    //public ParticleSystem WFX_4_StarDestroy_Explosion;
     private int HitCount = 0;
-    //ParticleSystem.Particle[] m_Particles; 
+    bool move = true;
+    bool isHit = false;
+    private Dinosaur_UImanager UImanager;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        
         //m_Particles = new ParticleSystem.Particle[WFX_19_StarTail_GazFire.main.maxParticles];
     }
  
@@ -28,8 +29,10 @@ public class DestoryableObject : MonoBehaviour
  
         // Vector3 getVel = new Vector3(xMove, 0, zMove) * speed;
         // rb.velocity = getVel;
+        if(move){
          rb.AddForce(Vector3.left * power);
          rb.velocity = new Vector3(-power,-5f,0);
+        }
     }
 
     public void MoveStars(){
@@ -40,17 +43,22 @@ public class DestoryableObject : MonoBehaviour
     public void StarDestoryed(Vector3 Positon){
         HitCount++;
         Debug.Log("This star is hit "+ HitCount+" times");
-        if (HitCount >= 3)
+        if (HitCount >= 3 && !isHit)
         {
             Debug.Log("It's hit more than 3 times, so destroy it");
+            isHit=true;
+            Dinosaur_UImanager.Instance.HitFunction();
 
-            this.gameObject.transform.Find("WFX_19_StarTail_GazFire").gameObject.SetActive(false);
+            this.gameObject.transform.Find("CFXR Fire Breath").gameObject.SetActive(false);
             this.gameObject.GetComponent<StarEffectManger>().WFX_6_StarDestroy_ExplosiveSmoke.gameObject.SetActive(true);
             this.gameObject.GetComponent<StarEffectManger>().Effect_WFX_6_StarDestroy_ExplosiveSmoke();
             this.gameObject.transform.Find("BeveledCube_0").gameObject.SetActive(false);
             this.gameObject.transform.Find("BeveledCube_1").gameObject.SetActive(false);
 
-            Destroy(gameObject, 0.7f);
+             //UI 업데이트
+
+            Destroy(gameObject, 0.3f);
+            
         }
         else
         {
@@ -78,7 +86,7 @@ public class DestoryableObject : MonoBehaviour
         this.gameObject.GetComponent<StarEffectManger>().Effect_WFX_3_Groud_ExplosionLandMine();
         this.gameObject.transform.Find("BeveledCube_0").gameObject.SetActive(false);
         this.gameObject.transform.Find("BeveledCube_1").gameObject.SetActive(false);
-        Destroy(gameObject, 0.7f);
+        Destroy(gameObject, 0.3f);
     }
 
     private void StarGennerate(){
@@ -92,10 +100,15 @@ public class DestoryableObject : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         //총알과 부딪힌 경우, 땅과 부딪힌 경우
 
-        Debug.Log("hit item name: "+ other.gameObject.name);
+        //Debug.Log("hit item name: "+ other.gameObject.name);
         //Debug.Log("StarDestoryed");
         if(other.gameObject.name == "floor")
         {
+            move=false;
+
+            //UI 업데이트
+            Dinosaur_UImanager.Instance.MissFunction();
+            rb.velocity = new Vector3(0,0,0);
             StarOnTheGround_Effect();
         }
 

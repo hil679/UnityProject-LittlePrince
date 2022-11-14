@@ -30,7 +30,7 @@ public class StarGenerator : MonoBehaviour
         //2. 생성된 별 떨어지기
         if(DelayTime==false){
             DelayTime = true;
-            Debug.Log("별똥별 생성");
+            //Debug.Log("별똥별 생성");
             StartCoroutine(StarGenerate());
         }
 

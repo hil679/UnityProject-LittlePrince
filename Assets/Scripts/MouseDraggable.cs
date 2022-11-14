@@ -17,15 +17,16 @@ public class MouseDraggable : MonoBehaviour
     private  void OnMouseDown() {
         //Capture the mouse offset
         mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
-        print("mousePositionOffset: "+mousePositionOffset+" = "+gameObject.transform.position+" - "+GetMouseWorldPosition());
+        //print("mousePositionOffset: "+mousePositionOffset+" = "+gameObject.transform.position+" - "+GetMouseWorldPosition());
 
         Debug.Log(gameObject.name + " is Shooted");
+        gameObject.GetComponent<DestoryableObject>().StarDestoryed(gameObject.transform.position);
     }
 
     private void OnMouseDrag() {
         gameObject.transform.position = GetMouseWorldPosition() + mousePositionOffset;
-        print("Dragging...");
-        print("Position : "+gameObject.transform.position);
+        //print("Dragging...");
+        //print("Position : "+gameObject.transform.position);
     }
 
     // Start is called before the first frame update
