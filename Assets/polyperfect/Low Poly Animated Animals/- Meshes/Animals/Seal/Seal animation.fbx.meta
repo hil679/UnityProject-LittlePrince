@@ -1,115 +1,41 @@
 fileFormatVersion: 2
-guid: fee5345253baaf049b589d9a9339467a
+guid: 32b54b4d43617a446a52b3051aa43d72
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Ankle_L
-    100002: Ankle_R
-    100004: Chest_M
-    100006: DeformationSystem
-    100008: Ear1_L
-    100010: Ear1_R
-    100012: Ear2_L
-    100014: Ear2_R
-    100016: Ear3_L
-    100018: Ear3_R
-    100020: Elbow_L
-    100022: Elbow_R
-    100024: Eye_L
-    100026: Eye_R
-    100028: EyeEnd_L
-    100030: EyeEnd_R
-    100032: Fingers1_L
-    100034: Fingers1_R
-    100036: Geometry
-    100038: Head_M
-    100040: HeadEnd_M
-    100042: Hip_L
-    100044: Hip_R
-    100046: Jaw_M
-    100048: JawEnd_M
-    100050: Knee_L
-    100052: Knee_R
-    100054: Main
-    100056: Neck1_M
-    100058: Neck_M
-    100060: Root_M
-    100062: Scapula_L
-    100064: Scapula_R
-    100066: Seal
-    100068: //RootNode
-    100070: Shoulder_L
-    100072: Shoulder_R
-    100074: Spine1_M
-    100076: Tail0_M
-    100078: Tail1_M
-    100080: Tail2_M
-    100082: Toes1_L
-    100084: Toes1_R
-    100086: Wrist_L
-    100088: Wrist_R
-    400000: Ankle_L
-    400002: Ankle_R
-    400004: Chest_M
-    400006: DeformationSystem
-    400008: Ear1_L
-    400010: Ear1_R
-    400012: Ear2_L
-    400014: Ear2_R
-    400016: Ear3_L
-    400018: Ear3_R
-    400020: Elbow_L
-    400022: Elbow_R
-    400024: Eye_L
-    400026: Eye_R
-    400028: EyeEnd_L
-    400030: EyeEnd_R
-    400032: Fingers1_L
-    400034: Fingers1_R
-    400036: Geometry
-    400038: Head_M
-    400040: HeadEnd_M
-    400042: Hip_L
-    400044: Hip_R
-    400046: Jaw_M
-    400048: JawEnd_M
-    400050: Knee_L
-    400052: Knee_R
-    400054: Main
-    400056: Neck1_M
-    400058: Neck_M
-    400060: Root_M
-    400062: Scapula_L
-    400064: Scapula_R
-    400066: Seal
-    400068: //RootNode
-    400070: Shoulder_L
-    400072: Shoulder_R
-    400074: Spine1_M
-    400076: Tail0_M
-    400078: Tail1_M
-    400080: Tail2_M
-    400082: Toes1_L
-    400084: Toes1_R
-    400086: Wrist_L
-    400088: Wrist_R
-    2100000: Seal
-    4300000: Seal
-    7400000: Seal_Idle
-    7400002: Seal_Idle 2
-    7400004: Seal_Idle to Walk
-    7400006: Seal_Walk
-    7400008: Seal_Walk to Idle
-    7400010: Seal_Idle to Run
-    7400012: Seal_Run
-    7400014: Seal_Run to Idle
-    7400016: Seal_Attack
-    7400018: Seal_Death
-    9500000: //RootNode
-    13700000: Seal
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 4276068435481244917
+    second: Seal_Idle
+  - first:
+      74: 938649133528559803
+    second: Seal_Idle 2
+  - first:
+      74: 7063169413054535970
+    second: Seal_Idle to Walk
+  - first:
+      74: 2062782614530918312
+    second: Seal_Walk
+  - first:
+      74: -5708870248725948387
+    second: Seal_Walk to Idle
+  - first:
+      74: -8753718715001628803
+    second: Seal_Idle to Run
+  - first:
+      74: -8895640891401203930
+    second: Seal_Run
+  - first:
+      74: 4292840059712246161
+    second: Seal_Run to Idle
+  - first:
+      74: 3249065694965773838
+    second: Seal_Attack
+  - first:
+      74: -3654739678592011135
+    second: Seal_Death
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -118,6 +44,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -134,313 +61,42 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Seal_Idle
-      takeName: Seal_Idle
-      firstFrame: 0
-      lastFrame: 60
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Seal_Idle 2
-      takeName: Seal_Idle 2
-      firstFrame: 100
-      lastFrame: 290
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 100
-    - serializedVersion: 16
-      name: Seal_Idle to Walk
-      takeName: Seal_Idle to Walk
-      firstFrame: 330
-      lastFrame: 342
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Seal_Walk
-      takeName: Seal_Walk
-      firstFrame: 360
-      lastFrame: 390
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 360
-    - serializedVersion: 16
-      name: Seal_Walk to Idle
-      takeName: Seal_Walk to Idle
-      firstFrame: 410
-      lastFrame: 422
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Seal_Idle to Run
-      takeName: Seal_Idle to Run
-      firstFrame: 450
-      lastFrame: 458
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Seal_Run
-      takeName: Seal_Run
-      firstFrame: 490
-      lastFrame: 506
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 490
-    - serializedVersion: 16
-      name: Seal_Run to Idle
-      takeName: Seal_Run to Idle
-      firstFrame: 520
-      lastFrame: 529
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Seal_Attack
-      takeName: Seal_Attack
-      firstFrame: 560
-      lastFrame: 595
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 560
-    - serializedVersion: 16
-      name: Seal_Death
-      takeName: Seal_Death
-      firstFrame: 630
-      lastFrame: 650
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    isReadable: 1
+    clipAnimations: []
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -449,10 +105,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -462,13 +118,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

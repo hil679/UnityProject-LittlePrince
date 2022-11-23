@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3ab9cf7202a8c4844b5b1fb312f4a062
+guid: 1da80cef4f3aeb24dae4971298963ff5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontNames:
   - NanumGothic
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 15119c8a49c47174086f6ee508206720, type: 3}
+  - {fileID: 12800000, guid: 574cfd14523e40c4fa56499682c7a3b4, type: 3}
+  - {fileID: 12800000, guid: 1571c2ca2fd0eda4fb7a0876a0300654, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
