@@ -11,6 +11,13 @@ namespace BNG {
     /// </summary>
     public class UnicornController : GrabbableEvents {
 
+        [Tooltip("When you grab it, the Unicorn will appear")]
+        public GameObject Unicorn;
+        
+        [Tooltip("When you summon  the Unicorn, or undo it, it will be played")]
+        public ParticleSystem SummonFX;
+
+
         [Tooltip("Movement Speed to apply if using a CharacterController, or Force to apply if using a Rigidbody controller.")]
         public float JetForce = 10f;
 
@@ -65,9 +72,18 @@ namespace BNG {
         }
 
         public override void OnGrab(Grabber grabber) {
+            Debug.Log("Grabbed The Unicorn Controller");
             // disable gravity
             if(DisableGravityWhileHeld) {
                 ChangeGravity(false);
+            }
+            //Enable the Effect when you summon your Unicorn
+            if(Unicorn != null)
+            {
+                if(SummonFX != null && !SummonFX.isPlaying) {
+                    SummonFX.Play();
+                }
+                Unicorn.SetActive(true);
             }
             
         }
@@ -79,11 +95,20 @@ namespace BNG {
         }
 
         public override void OnRelease() {
+            Debug.Log("Realeased The Unicorn Controller");
             stopJet();
 
             // re-enforce gravity
             if (DisableGravityWhileHeld) {
                 ChangeGravity(true);
+            }
+            //Enable the Effect when you unsummon your Unicorn
+            if(Unicorn != null)
+            {
+                if(SummonFX != null && !SummonFX.isPlaying) {
+                    SummonFX.Play();
+                }
+                Unicorn.SetActive(true);
             }
         }
 
