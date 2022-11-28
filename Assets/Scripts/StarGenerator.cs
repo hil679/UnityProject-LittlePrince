@@ -42,7 +42,7 @@ public class StarGenerator : MonoBehaviour
 
         GameObject myInstance = Instantiate(shootingStarPrefab); 
         // position 위치 지정
-        myInstance.transform.position =  new Vector3(Random.Range(10, 30), Random.Range(8, 30), Random.Range(5, 20));
+        myInstance.transform.position =  new Vector3(Random.Range(10, 30), Random.Range(8, 30), Random.Range(5, 50));
         float SettingNum = Random.Range(1, 10);
         myInstance.transform.localScale += new Vector3(SettingNum*5, SettingNum*5, SettingNum*5);
         //myInstance.transform.Find("WFX_4_StarDestroy_Explosion Small").gameObject.SetActive(false);
