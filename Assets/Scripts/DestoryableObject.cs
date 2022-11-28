@@ -102,7 +102,7 @@ public class DestoryableObject : MonoBehaviour
 
         //Debug.Log("hit item name: "+ other.gameObject.name);
         //Debug.Log("StarDestoryed");
-        if(other.gameObject.name == "floor")
+        if(other.gameObject.name == "floor" || other.gameObject.name == "Terrain")
         {
             move=false;
 

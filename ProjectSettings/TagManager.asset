@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - Star
+  - Water
   layers:
   - Default
   - TransparentFX
