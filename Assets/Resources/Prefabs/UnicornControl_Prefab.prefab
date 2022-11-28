@@ -5531,7 +5531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Unicorn: {fileID: 4490203246734378850}
   SummonFX: {fileID: 3184396368233891114}
-  JetForce: 10
+  JetForce: 5
   JetFX: {fileID: 0}
   DisableGravityWhileHeld: 1
 --- !u!1 &6991354080771039557
@@ -15038,7 +15038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8868947096665861739
 Transform:
   m_ObjectHideFlags: 0
@@ -19859,7 +19859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1148687344820888, guid: aab8343b2bae6204da9d88f5f26b2978, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4612459837318026, guid: aab8343b2bae6204da9d88f5f26b2978, type: 3}
       propertyPath: m_RootOrder

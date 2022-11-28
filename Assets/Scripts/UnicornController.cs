@@ -80,7 +80,7 @@ namespace BNG {
             //Enable the Effect when you summon your Unicorn
             if(Unicorn != null)
             {
-                if(SummonFX != null && !SummonFX.isPlaying) {
+                if(SummonFX != null) {
                     SummonFX.Play();
                 }
                 Unicorn.SetActive(true);
@@ -105,10 +105,10 @@ namespace BNG {
             //Enable the Effect when you unsummon your Unicorn
             if(Unicorn != null)
             {
-                if(SummonFX != null && !SummonFX.isPlaying) {
+                if(SummonFX != null) {
                     SummonFX.Play();
                 }
-                Unicorn.SetActive(true);
+                Unicorn.SetActive(false);
             }
         }
 
