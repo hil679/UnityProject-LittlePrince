@@ -58,7 +58,7 @@ public class DialogueSystem : MonoBehaviour
             isFirst = false;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger)>0.5)
         {
             if (isTypingEffect == true)
             {
