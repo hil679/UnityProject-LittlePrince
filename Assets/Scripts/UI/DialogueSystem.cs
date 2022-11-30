@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
+using BNG;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -58,7 +59,7 @@ public class DialogueSystem : MonoBehaviour
             isFirst = false;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (InputBridge.Instance.RightTriggerDown)
         {
             if (isTypingEffect == true)
             {

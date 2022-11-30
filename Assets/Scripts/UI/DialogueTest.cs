@@ -29,15 +29,6 @@ public class DialogueTest : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
         textCountdown.gameObject.SetActive(false);
-
-        yield return new WaitUntil(() => dialogSystem2.UpdateDialog());
-        
-        textCountdown.gameObject.SetActive(true);
-        textCountdown.text = "TheEnd";
-
-        yield return new WaitForSeconds(2);
-        
-        UnityEditor.EditorApplication.ExitPlaymode();
     }
 
 
