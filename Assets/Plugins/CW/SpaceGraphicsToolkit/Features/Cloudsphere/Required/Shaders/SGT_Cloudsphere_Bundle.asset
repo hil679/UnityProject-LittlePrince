@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Space Graphics Toolkit/Cloudsphere
   target: {fileID: 4800000, guid: dafa8efc61b2adb4bb0eada9ced6cc91, type: 3}
-  variantHash: -1609236552
+  variantHash: -80827254
   projectHash: 2000714961
   variants:
   - Pipe: 0
