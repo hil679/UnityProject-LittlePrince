@@ -11,7 +11,7 @@ public class SnakeMove : MonoBehaviour
     bool isMoving = true;
     void Start()
     {
-        transform.position = TargetPos[TargetNum].transform.position;
+       // transform.position = TargetPos[TargetNum].transform.position;
     }
 
     // Update is called once per frame
@@ -37,7 +37,9 @@ public class SnakeMove : MonoBehaviour
         if (transform.position == TargetPos[TargetNum].transform.position && isMoving == true)
         {
             TargetNum++;
-            if(TargetNum == TargetPos.Length)
+            //new Vector3 TargetV = Quaternion.Euler(TargetPos[TargetNum].rotation);
+            this.transform.rotation = Quaternion.Euler(TargetPos[TargetNum].rotation.eulerAngles - this.transform.rotation.eulerAngles);
+            if (TargetNum == TargetPos.Length)
             {
                 isMoving = false;
             }
