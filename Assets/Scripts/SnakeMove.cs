@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SnakeMove : MonoBehaviour
 {
     [SerializeField] Animator moveAni;
     [SerializeField] Transform[] TargetPos;
-    [SerializeField] float speed = 5f;
+    [SerializeField] float speed = 1f;
+    [SerializeField] float RotateSpeed = 1f;
     int TargetNum = 0;
-    bool isMoving = true;
+    bool isMoving = false;
+    private Vector3 NewTargetPos;
     void Start()
     {
        // transform.position = TargetPos[TargetNum].transform.position;
@@ -17,31 +20,47 @@ public class SnakeMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovePath();
-        if (Input.GetKeyDown(KeyCode.A))
+        if (isMoving)
         {
+            MovePath();
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("A pressed");
             moveAni.SetTrigger("Moving");
             //moveAni.
         }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            moveAni.SetTrigger("Stopped");
-        }
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    moveAni.SetTrigger("Stopped");
+        //}
     }
 
-        
+    public void SnakeMovingBtn()
+    {
+        isMoving = true;
+    }
+
     private void MovePath()
     {
-        transform.position = Vector3.MoveTowards(transform.position, TargetPos[TargetNum].transform.position, speed * Time.deltaTime);
+        NewTargetPos = new Vector3(TargetPos[TargetNum].transform.position.x, transform.position.y, TargetPos[TargetNum].transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, NewTargetPos, speed * Time.deltaTime);
+        //transform.LookAt(TargetPos[TargetNum]);
 
-        if (transform.position == TargetPos[TargetNum].transform.position && isMoving == true)
+        Vector3 dir = TargetPos[TargetNum].transform.position - this.transform.position;
+        this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotateSpeed);
+
+        if (transform.position == NewTargetPos && isMoving == true)
         {
-            TargetNum++;
-            //new Vector3 TargetV = Quaternion.Euler(TargetPos[TargetNum].rotation);
-            this.transform.rotation = Quaternion.Euler(TargetPos[TargetNum].rotation.eulerAngles - this.transform.rotation.eulerAngles);
-            if (TargetNum == TargetPos.Length)
+            
+            if (TargetNum == TargetPos.Length-1)
             {
                 isMoving = false;
+                moveAni.SetTrigger("Stopped");
+            }
+            else
+            {
+                TargetNum++;
             }
         }
     }
