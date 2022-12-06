@@ -8,14 +8,13 @@ public class onClick_MainMenu : MonoBehaviour
 
     public Canvas Main;
     // Start is called before the first frame update
-    public void MainMenu_clicked()
+    public void Quit_Clicked()
     {
-        MainMenu.SetActive(true);
-        MainMenu.transform.position = Vector3.zero;
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
     }
-
-    public void MainMenu_back_clicked()
-    {
-        MainMenu.SetActive(false);
-    }
+    
+    
 }

@@ -13,6 +13,7 @@ public class SetVolume : MonoBehaviour
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("masterVol", 0.75f);
+        SetLevel(slider.value);
     }
 
     public void SetLevel(float sliderValue)
