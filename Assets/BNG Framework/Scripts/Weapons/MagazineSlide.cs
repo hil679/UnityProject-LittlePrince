@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace BNG {
 
@@ -38,6 +39,7 @@ namespace BNG {
         // Lock in place for physics
         bool lockedInPlace = false;
 
+        public AudioMixerGroup MixerName;
         public AudioClip ClipAttachSound;
         public AudioClip ClipDetachSound;
 
@@ -153,7 +155,7 @@ namespace BNG {
 
             // Play Sound
             if(ClipAttachSound && Time.timeSinceLevelLoad > 0.1f) {
-                VRUtils.Instance.PlaySpatialClipAt(ClipAttachSound, transform.position, 1f);
+                VRUtils.Instance.PlaySpatialClipAt(ClipAttachSound, transform.position, 1f, 1f, 0, MixerName);
             }
 
             // Move to desired location before locking in place
@@ -195,7 +197,7 @@ namespace BNG {
                 return null;
             }
 
-            VRUtils.Instance.PlaySpatialClipAt(ClipDetachSound, transform.position, 1f, 0.9f);
+            VRUtils.Instance.PlaySpatialClipAt(ClipDetachSound, transform.position, 1f, 0.9f, 0, MixerName);
             
             HeldMagazine.transform.parent = null;
 

@@ -359,7 +359,7 @@ namespace BNG {
             if(!BulletInChamber && MustChamberRounds) {
                 // Only play empty sound once per trigger down
                 if(!playedEmptySound) {
-                    VRUtils.Instance.PlaySpatialClipAt(EmptySound, transform.position, EmptySoundVolume, 0.5f);
+                    VRUtils.Instance.PlaySpatialClipAt(EmptySound, transform.position, EmptySoundVolume, 0.5f, 0, MixerName);
                     playedEmptySound = true;
                 }
                 

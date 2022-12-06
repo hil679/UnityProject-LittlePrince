@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using BNG;
+using UnityEngine.Audio;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -14,8 +15,10 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private Speaker[] speakers;
     [SerializeField] private DialogData[] Dialogs;
     [SerializeField] private bool isAutoStart = true;
+    [SerializeField] private AudioClip[] TTSs;
+    [SerializeField] private AudioMixerGroup MixerName;
 
-    private bool isFirst = true;
+    [SerializeField] private bool isFirst = false;
     private int currentDialogIndex = -1;
     private int currentSpeakerIndex = 0;
     
@@ -118,7 +121,7 @@ public class DialogueSystem : MonoBehaviour
     {
         int index = 0;
         isTypingEffect = true;
-
+        VRUtils.Instance.PlaySpatialClipAt(TTSs[currentDialogIndex], transform.position, 1.0f, 1.0f, 0, MixerName);
         while (index <= Dialogs[currentDialogIndex].dialogue.Length)
         {
             speakers[currentSpeakerIndex].textDialogue.text = Dialogs[currentDialogIndex].dialogue.Substring(0, index);

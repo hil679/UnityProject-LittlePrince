@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace BNG {
     public class BulletInsert : MonoBehaviour {
@@ -15,6 +16,7 @@ namespace BNG {
         /// </summary>
         public string AcceptBulletName = "Bullet";
 
+        public AudioMixerGroup MixerName;
         public AudioClip InsertSound;
 
         void OnTriggerEnter(Collider other) {
@@ -40,7 +42,7 @@ namespace BNG {
 
                     // Play Sound
                     if(InsertSound) {
-                        VRUtils.Instance.PlaySpatialClipAt(InsertSound, transform.position, 1f, 0.5f);
+                        VRUtils.Instance.PlaySpatialClipAt(InsertSound, transform.position, 1f, 0.5f, 0, MixerName);
                     }
                 }
             }

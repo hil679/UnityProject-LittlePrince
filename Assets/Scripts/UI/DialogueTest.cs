@@ -8,27 +8,24 @@ public class DialogueTest : MonoBehaviour
     [SerializeField]
     private DialogueSystem dialogSystem;
 
-    [SerializeField] 
-    private TextMeshProUGUI textCountdown;
-
+    [SerializeField] private GameObject starGen;
     [SerializeField] private DialogueSystem dialogSystem2;
 
     private IEnumerator Start()
     {
-        textCountdown.gameObject.SetActive(false);
-        
+
         yield return new WaitUntil(()=>dialogSystem.UpdateDialog());
         
-        textCountdown.gameObject.SetActive(true);
         int count = 5;
         while (count > 0)
         {
-            textCountdown.text = count.ToString();
+            
             count--;
 
             yield return new WaitForSeconds(1);
+            
+            starGen.SetActive(true);
         }
-        textCountdown.gameObject.SetActive(false);
     }
 
 
