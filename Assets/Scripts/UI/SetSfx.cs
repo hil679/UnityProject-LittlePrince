@@ -13,6 +13,7 @@ public class SetSfx : MonoBehaviour
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("sfxVol", 0.75f);
+        SetLevel(slider.value);
     }
 
     public void SetLevel(float sliderValue)

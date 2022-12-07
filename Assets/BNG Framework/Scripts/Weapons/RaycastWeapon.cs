@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 
 namespace BNG {
@@ -157,6 +158,10 @@ namespace BNG {
         /// <summary>
         /// Play this sound on shoot
         /// </summary>
+
+        [Tooltip("Set Audio Mixer of Gun Sound")]
+        public AudioMixerGroup MixerName;
+        
         [Tooltip("Play this sound on shoot")]
         public AudioClip GunShotSound;
 
@@ -277,7 +282,8 @@ namespace BNG {
             }
 
             // Fire gun if possible
-            if (readyToShoot && triggerValue >= 0.75f) {
+            if (readyToShoot && triggerValue >= 0.75f)
+            {
                 Shoot();
 
                 // Immediately ready to keep firing if 
@@ -353,7 +359,7 @@ namespace BNG {
             if(!BulletInChamber && MustChamberRounds) {
                 // Only play empty sound once per trigger down
                 if(!playedEmptySound) {
-                    VRUtils.Instance.PlaySpatialClipAt(EmptySound, transform.position, EmptySoundVolume, 0.5f);
+                    VRUtils.Instance.PlaySpatialClipAt(EmptySound, transform.position, EmptySoundVolume, 0.5f, 0, MixerName);
                     playedEmptySound = true;
                 }
                 
@@ -362,13 +368,13 @@ namespace BNG {
 
             // Need to release slide
             if(ws != null && ws.LockedBack) {
-                VRUtils.Instance.PlaySpatialClipAt(EmptySound, transform.position, EmptySoundVolume, 0.5f);
+                VRUtils.Instance.PlaySpatialClipAt(EmptySound, transform.position, EmptySoundVolume, 0.5f, 0, MixerName);
                 return;
             }
 
             // Create our own spatial clip
-            VRUtils.Instance.PlaySpatialClipAt(GunShotSound, transform.position, GunShotVolume);
-
+            VRUtils.Instance.PlaySpatialClipAt(GunShotSound, transform.position, GunShotVolume, 1f, 0, MixerName);
+            
             // Haptics
             if (thisGrabber != null) {
                 input.VibrateController(0.1f, 0.2f, 0.1f, thisGrabber.HandSide);

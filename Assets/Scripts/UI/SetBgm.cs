@@ -13,6 +13,7 @@ public class SetBgm : MonoBehaviour
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("bgmVol", 0.75f);
+        SetLevel(slider.value);
     }
 
     public void SetLevel(float sliderValue)

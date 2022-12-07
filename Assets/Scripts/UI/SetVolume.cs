@@ -7,17 +7,42 @@ using UnityEngine.UI;
 public class SetVolume : MonoBehaviour
 {
     public AudioMixer mixer;
-    public Slider slider;
+    public Slider MasterVolSlider;
+    public Slider sfxVolSlider;
+    public Slider bgmVolSlider;
+    public Slider TTSVolSlider;
     
     // Start is called before the first frame update
     void Start()
     {
-        slider.value = PlayerPrefs.GetFloat("masterVol", 0.75f);
+        MasterVolSlider.value = PlayerPrefs.GetFloat("masterVol", 0.75f);
+        SetMasterLevel(MasterVolSlider.value);
+        sfxVolSlider.value = PlayerPrefs.GetFloat("sfxVol", 0.75f);
+        SetSFXLevel(sfxVolSlider.value);
+        bgmVolSlider.value = PlayerPrefs.GetFloat("bgmVol", 0.75f);
+        SetBGMLevel(bgmVolSlider.value);
+        TTSVolSlider.value = PlayerPrefs.GetFloat("TTSVol", 0.75f);
+        SetTTSLevel(TTSVolSlider.value);
     }
 
-    public void SetLevel(float sliderValue)
+    public void SetMasterLevel(float sliderValue)
     {
         mixer.SetFloat("masterVol", Mathf.Log10(sliderValue) * 20);
         PlayerPrefs.SetFloat("masterVol", sliderValue);
+    }
+    public void SetSFXLevel(float sliderValue)
+    {
+        mixer.SetFloat("sfxVol", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("sfxVol", sliderValue);
+    }
+    public void SetBGMLevel(float sliderValue)
+    {
+        mixer.SetFloat("bgmVol", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("bgmVol", sliderValue);
+    }
+    public void SetTTSLevel(float sliderValue)
+    {
+        mixer.SetFloat("TTSVol", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("TTSVol", sliderValue);
     }
 }

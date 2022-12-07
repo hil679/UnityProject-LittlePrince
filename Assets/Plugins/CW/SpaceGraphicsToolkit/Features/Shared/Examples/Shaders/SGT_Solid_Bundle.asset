@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Space Graphics Toolkit/Solid
   target: {fileID: 4800000, guid: f6240b33bc97f104dbd21a484953d6a3, type: 3}
-  variantHash: -1215018212
+  variantHash: 2034008674
   projectHash: 2000714961
   variants:
   - Pipe: 0

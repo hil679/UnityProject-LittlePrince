@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 namespace BNG {
@@ -112,7 +113,7 @@ namespace BNG {
             }
         }
 
-        public AudioSource PlaySpatialClipAt(AudioClip clip, Vector3 pos, float volume, float spatialBlend = 1f, float randomizePitch = 0) {
+        public AudioSource PlaySpatialClipAt(AudioClip clip, Vector3 pos, float volume, float spatialBlend = 1f, float randomizePitch = 0, AudioMixerGroup mixerName = null) {
 
             if(clip == null) {
                 return null;
@@ -131,8 +132,8 @@ namespace BNG {
             source.pitch = getRandomizedPitch(randomizePitch);
             source.spatialBlend = spatialBlend;
             source.volume = volume;
+            source.outputAudioMixerGroup = mixerName;
             source.Play();
-
             Destroy(go, clip.length);
 
             return source;

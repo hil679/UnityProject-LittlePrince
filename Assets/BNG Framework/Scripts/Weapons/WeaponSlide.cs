@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace BNG {
 
@@ -27,6 +28,7 @@ namespace BNG {
         /// </summary>
         public bool LockedBack = false;
 
+        public AudioMixerGroup MixerName;
         /// <summary>
         /// Sound to play when slide is released back into position
         /// </summary>
@@ -144,7 +146,7 @@ namespace BNG {
 
             if (!LockedBack) {
                 if (thisGrabbable.BeingHeld || parentGrabbable.BeingHeld) {
-                    VRUtils.Instance.PlaySpatialClipAt(LockedBackSound, transform.position, 1f, 0.8f);
+                    VRUtils.Instance.PlaySpatialClipAt(LockedBackSound, transform.position, 1f, 0.8f, 0, MixerName);
                 }
 
                 LockedBack = true;
@@ -155,7 +157,7 @@ namespace BNG {
 
             if (LockedBack) {
                 if (thisGrabbable.BeingHeld || parentGrabbable.BeingHeld) {
-                    VRUtils.Instance.PlaySpatialClipAt(SlideReleaseSound, transform.position, 1f, 0.9f);
+                    VRUtils.Instance.PlaySpatialClipAt(SlideReleaseSound, transform.position, 1f, 0.9f, 0, MixerName);
                 }
 
                 LockedBack = false;
