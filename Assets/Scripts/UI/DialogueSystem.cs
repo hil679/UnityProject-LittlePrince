@@ -38,7 +38,6 @@ public class DialogueSystem : MonoBehaviour
                 index++;
             }
         }
-        Setup();
     }
 
     private void Setup()
@@ -62,7 +61,7 @@ public class DialogueSystem : MonoBehaviour
             isFirst = false;
         }
 
-        if (InputBridge.Instance.RightTriggerDown)
+        if (Input.GetMouseButtonDown(0))
         {
             if (isTypingEffect == true)
             {
