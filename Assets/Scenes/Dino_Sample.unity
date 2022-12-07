@@ -14860,9 +14860,11 @@ MonoBehaviour:
   - speakerIndex: 0
     name: 
     dialogue: 
-  isAutoStart: 1
-  TTSs: []
-  MixerName: {fileID: 0}
+  isAutoStart: 0
+  TTSs:
+  - {fileID: 0}
+  MixerName: {fileID: -7123620952982094046, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+    type: 2}
   isFirst: 1
   typingSpeed: 0.05
 --- !u!4 &1773377309

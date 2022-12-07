@@ -20,6 +20,8 @@ public class Water_Detected : MonoBehaviour
 		if (other.gameObject.tag == "Water")
 		{
             Debug.Log("Water");
+            GameObject tutorialUI = GameObject.Find("WaterInterUI");
+            tutorialUI.SetActive(false);
 		}
 	}
 }
