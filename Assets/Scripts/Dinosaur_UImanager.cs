@@ -27,6 +27,7 @@ public class Dinosaur_UImanager : MonoBehaviour
     public int MissionFailureCount;
     int HitCount = 0;
     int MissCount = 0;
+    public bool Successed = false;
 
 
 
@@ -47,6 +48,7 @@ public class Dinosaur_UImanager : MonoBehaviour
         if(HitCount == MissionSuccessCount && Text_Mission.text == "미션 스타트")
         {
             Text_Mission.text = "미션 성공";
+            Successed = true;
         }
     }
     public void MissFunction()
