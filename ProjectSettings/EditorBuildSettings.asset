@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Dino_Sample.unity
+    guid: 187156184db155840948703f3bd0cb76
+  - enabled: 1
+    path: Assets/Scenes/Earth_plane.unity
+    guid: 127363c018e0f4a2d8f9bff2be3544d3
+  - enabled: 1
+    path: Assets/Scenes/PathInDesert_Sample.unity
+    guid: 3ef1488d1fe044eebba799cac9ae4574
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6fc47b1d7fe5fad40b1b4681743c4d0c,
       type: 2}
