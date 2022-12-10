@@ -7,7 +7,7 @@ public class StarGenerator : MonoBehaviour
 {
     public GameObject shootingStarPrefab;
     public Transform parent;
-
+    public float SpawnRate = 0.5f;
     bool DelayTime = false;
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,7 @@ public class StarGenerator : MonoBehaviour
     }
 
     IEnumerator StarGenerate(){
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(SpawnRate);
 
         GameObject myInstance = Instantiate(shootingStarPrefab); 
         // position 위치 지정

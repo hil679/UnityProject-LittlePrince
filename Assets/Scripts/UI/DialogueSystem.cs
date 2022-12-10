@@ -61,7 +61,7 @@ public class DialogueSystem : MonoBehaviour
             isFirst = false;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (InputBridge.Instance.RightTriggerDown)
         {
             if (isTypingEffect == true)
             {
@@ -112,7 +112,7 @@ public class DialogueSystem : MonoBehaviour
         speaker.objectArrow.SetActive(false);
 
         Color color = speaker.characterImage.color;
-        color.a = visible == true ? 1 : 0.2f;
+        color.a = visible == true ? 1 : 0;
         speaker.characterImage.color = color;
     }
     
