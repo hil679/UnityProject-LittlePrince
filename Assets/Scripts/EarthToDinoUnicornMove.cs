@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +9,6 @@ public class EarthToDinoUnicornMove : MonoBehaviour
     NavMeshAgent navMeshAgent;
     //[SerializeField]
     public Transform target;
-    
-
 
     void Start ()
     {
@@ -20,10 +17,13 @@ public class EarthToDinoUnicornMove : MonoBehaviour
 		
     }
 
+    private float speed = 0.5f;
     void Update ()
     {
         
         navMeshAgent.SetDestination (target.position);
+        float fMove = Time.deltaTime * speed;
+        transform.Translate(Vector3.forward * fMove);
 		
       
     }
