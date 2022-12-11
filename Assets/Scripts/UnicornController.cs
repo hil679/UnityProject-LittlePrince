@@ -34,6 +34,9 @@ namespace BNG {
 
         AudioSource audioSource;
 
+        public GameObject XRRig;
+        public GameObject UnicornPawn;
+
         void Start() {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
@@ -48,6 +51,7 @@ namespace BNG {
             }
 
             audioSource = GetComponent<AudioSource>();
+            XRRig = player;
         }
 
         public override void OnTrigger(float triggerValue) {
@@ -84,6 +88,9 @@ namespace BNG {
                     SummonFX.Play();
                 }
                 Unicorn.SetActive(true);
+                //UnicornPawn.GetComponent<Renderer>().enabled = false;
+                UnicornPawn.SetActive(false);
+                Unicorn.transform.parent = XRRig.transform.Find("HeadCollision");
             }
             
         }
@@ -109,6 +116,10 @@ namespace BNG {
                     SummonFX.Play();
                 }
                 Unicorn.SetActive(false);
+                //UnicornPawn.GetComponent<Renderer>().enabled = false;
+                UnicornPawn.SetActive(true);
+                Unicorn.transform.parent = this.transform;
+
             }
         }
 
