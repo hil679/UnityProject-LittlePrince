@@ -28,6 +28,7 @@ public class SnakeMove : MonoBehaviour
         {
             Debug.Log("A pressed");
             moveAni.SetTrigger("Moving");
+            isMoving = true;
             //moveAni.
         }
         //if (Input.GetKeyDown(KeyCode.S))
