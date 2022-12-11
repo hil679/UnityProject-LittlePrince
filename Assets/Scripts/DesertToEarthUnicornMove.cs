@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using BNG;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -8,13 +9,16 @@ using UnityEngine.SceneManagement;
 public class DesertToEarthUnicornMove : MonoBehaviour
 {
     NavMeshAgent navMeshAgent;
+
+    private BNG.SceneLoader loader;
     //[SerializeField]
     public Transform target;
 
     void Start ()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-		navMeshAgent.SetDestination (target.position);	
+		navMeshAgent.SetDestination (target.position);
+        loader = GetComponent<SceneLoader>();
     }
 
     void Update ()
@@ -24,6 +28,7 @@ public class DesertToEarthUnicornMove : MonoBehaviour
 
     private void OnTriggerEnter()
     {
-	    SceneManager.LoadScene("Earth_plane");//보상씬 이름으로 바꾸기
+        Debug.Log("Collide");
+        loader.LoadScene("Earth_plane");
     }
 }
