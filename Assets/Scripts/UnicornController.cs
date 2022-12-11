@@ -90,7 +90,7 @@ namespace BNG {
                 Unicorn.SetActive(true);
                 //UnicornPawn.GetComponent<Renderer>().enabled = false;
                 UnicornPawn.SetActive(false);
-                Unicorn.transform.parent = XRRig.transform.Find("HeadCollision");
+                //Unicorn.transform.parent = XRRig.transform.Find("HeadCollision");
             }
             
         }
@@ -118,7 +118,7 @@ namespace BNG {
                 Unicorn.SetActive(false);
                 //UnicornPawn.GetComponent<Renderer>().enabled = false;
                 UnicornPawn.SetActive(true);
-                Unicorn.transform.parent = this.transform;
+                //Unicorn.transform.parent = this.transform;
 
             }
         }
