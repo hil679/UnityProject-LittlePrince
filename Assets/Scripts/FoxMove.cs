@@ -14,6 +14,7 @@ public class FoxMove : MonoBehaviour
     public bool isMoving = false;
 
     private bool isFoxRotationSame = false;
+    public bool secondMove = false;
     private Vector3 NewTargetPos;
     void Start()
     {
@@ -26,6 +27,10 @@ public class FoxMove : MonoBehaviour
         if (isMoving)
         {
             MovePath();
+        }
+        if (secondMove)
+        {
+            ReturnFox();
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -64,16 +69,7 @@ public class FoxMove : MonoBehaviour
                 Debug.Log("Stopped");
 
                 this.transform.rotation = Quaternion.Euler(0, 134.1f, 0);
-                //while (!isFoxRotationSame)
-                //{
-                //    Vector3 dir2 = RotationPos.transform.position - this.transform.position;
-                //    this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(dir2), Time.deltaTime * RotateSpeed);
-                //    if (this.transform.rotation.eulerAngles ==(dir2))
-                //    {
-                //        isFoxRotationSame = true;
-                //    }
-                //}
-                //StartCoroutine("rotationFox");
+               
             }
             else
             {
@@ -81,15 +77,31 @@ public class FoxMove : MonoBehaviour
             }
         }
     }
-    IEnumerator rotationFox()
+    private void ReturnFox()
     {
-        while (isFoxRotationSame)
+        NewTargetPos = new Vector3(TargetPos[TargetNum].transform.position.x, transform.position.y, TargetPos[TargetNum].transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, NewTargetPos, speed * Time.deltaTime);
+        //transform.LookAt(TargetPos[TargetNum]);
+
+        Vector3 dir = TargetPos[TargetNum].transform.position - this.transform.position;
+        this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotateSpeed);
+
+        if (transform.position == NewTargetPos && isMoving == true)
         {
-             Vector3 dir2 = RotationPos.transform.position - this.transform.position;
-             this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(dir2), Time.deltaTime * RotateSpeed);
-        
+
+            if (TargetNum == TargetPos.Length - 1)
+            {
+                isMoving = false;
+                moveAni.SetTrigger("Stopped");
+                Debug.Log("Stopped");
+
+                this.transform.rotation = Quaternion.Euler(0, 134.1f, 0);
+
+            }
+            else
+            {
+                TargetNum++;
+            }
         }
-        
-        yield return null;
     }
 }
