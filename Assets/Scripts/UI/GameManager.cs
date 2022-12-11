@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("Confidence", 0.0f);
             PlayerPrefs.SetString("Dino_Reward", "");
-            PlayerPrefs.SetString("Desert_reward", "");
+            PlayerPrefs.SetString("Desert_Reward", "");
         }
 
         _confidenceSlider.value = PlayerPrefs.GetFloat("Confidence", 0.0f);
@@ -60,17 +60,19 @@ public class GameManager : MonoBehaviour
 
     public void RewardSelect()
     {
-        Debug.Log("ASDFASDFA");
         GameObject clickObject = EventSystem.current.currentSelectedGameObject;
         Debug.Log(clickObject.name);
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Dino_Sample")
         {
-            PlayerPrefs.SetString("Dino_reward", clickObject.name);
+            PlayerPrefs.SetString("Dino_Reward", clickObject.name);
+            Debug.Log("Dino Reward Saved");
         }
         else if (scene.name == "PathInDesert_Sample")
         {
-            PlayerPrefs.SetString("Desert_reward", clickObject.name);
+            PlayerPrefs.SetString("Desert_Reward", clickObject.name);
+            Debug.Log("Desert Reward Saved");
+
         }
     }
 }

@@ -42,7 +42,7 @@ public class Dino_Dialogue : MonoBehaviour
         yield return new WaitUntil(() => dialog[1].UpdateDialog());
         //보상 선택
         RewardUI.SetActive(true);
-        yield return new WaitUntil(() => (PlayerPrefs.GetString("Dino_Sample") != ""));
+        yield return new WaitUntil(() => (PlayerPrefs.GetString("Dino_Reward") != ""));
         yield return new WaitUntil(() => dialog[2].UpdateDialog());
         //대화 끝난 후 자신감 상승, 이동 튜토리얼 진행
         GameManager.Instance.Confidence(0.5f);
