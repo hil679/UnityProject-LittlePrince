@@ -24,7 +24,6 @@ public class ConfidenceBar : MonoBehaviour
         confiImage.GetComponent<UIFade>().StartFadeIn();
         SliderImage1.GetComponent<UIFade>().StartFadeIn();
         SliderImage2.GetComponent<UIFade>().StartFadeIn();
-        PlayerPrefs.SetFloat("Confidence", 0);
         float start = PlayerPrefs.GetFloat("Confidence");
         _confidenceSlider.value = start;
         yield return new WaitForSeconds(3);

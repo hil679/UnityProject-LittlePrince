@@ -28,6 +28,7 @@ public class Dinosaur_UImanager : MonoBehaviour
     int HitCount = 0;
     int MissCount = 0;
     public bool Successed = false;
+    public bool Failed = false;
 
     public Slider slider;
 
@@ -62,6 +63,7 @@ public class Dinosaur_UImanager : MonoBehaviour
         if(MissCount == MissionFailureCount && Text_Mission.text == "미션 스타트")
         {
             Text_Mission.text = "미션 실패";
+            Failed = true;
         }
     }
 

@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetFloat("Confidence", 0.0f);
             PlayerPrefs.SetString("Dino_Reward", "");
             PlayerPrefs.SetString("Desert_Reward", "");
+            PlayerPrefs.SetFloat("Confidence", 0.0f);
         }
 
         _confidenceSlider.value = PlayerPrefs.GetFloat("Confidence", 0.0f);
