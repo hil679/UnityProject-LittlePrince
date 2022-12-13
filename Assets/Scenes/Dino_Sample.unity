@@ -1539,7 +1539,7 @@ MonoBehaviour:
   MixerName: {fileID: -7123620952982094046, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
     type: 2}
   transformRef: {fileID: 1066540765}
-  isFirst: 0
+  isFirst: 1
   typingSpeed: 0.1
 --- !u!1 &244137771
 GameObject:
@@ -13796,7 +13796,7 @@ MonoBehaviour:
   MixerName: {fileID: -7123620952982094046, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
     type: 2}
   transformRef: {fileID: 1066540765}
-  isFirst: 0
+  isFirst: 1
   typingSpeed: 0.1
 --- !u!4 &1356480106
 Transform:
@@ -16726,7 +16726,7 @@ MonoBehaviour:
   MixerName: {fileID: -7123620952982094046, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
     type: 2}
   transformRef: {fileID: 1066540765}
-  isFirst: 0
+  isFirst: 1
   typingSpeed: 0.1
 --- !u!1 &1784028018 stripped
 GameObject:
@@ -20294,6 +20294,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7830177104430602136, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7830177104430602139, guid: 2198be4c178ff874f8f9ce89297d7a44,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -20307,8 +20312,14 @@ PrefabInstance:
     - target: {fileID: 7830177104595482836, guid: 2198be4c178ff874f8f9ce89297d7a44,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7830177104602444594, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b63fa55951a020d4ca825279d730482b,
+        type: 3}
     - target: {fileID: 7830177104967717990, guid: 2198be4c178ff874f8f9ce89297d7a44,
         type: 3}
       propertyPath: m_IsActive
@@ -20384,6 +20395,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7830177105193352732, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f3d84e7c9a3c12c4f8f2af80cbda9da9,
+        type: 3}
     - target: {fileID: 7830177105441902868, guid: 2198be4c178ff874f8f9ce89297d7a44,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -20393,6 +20410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_name
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830177105441902869, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7830177105454624823, guid: 2198be4c178ff874f8f9ce89297d7a44,
         type: 3}
