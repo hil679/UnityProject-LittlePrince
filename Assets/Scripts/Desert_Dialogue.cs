@@ -9,7 +9,9 @@ public class Desert_Dialogue : MonoBehaviour
 {
     [SerializeField] private DialogueSystem[] dialogs;
     [SerializeField] private SnakeMove Snake;
+    [SerializeField] private FoxMove Fox;
     [SerializeField] private GameObject RewardUI;
+    [SerializeField] private GameObject light;
     
     
     private static Desert_Dialogue _instance;
@@ -36,16 +38,18 @@ public class Desert_Dialogue : MonoBehaviour
         yield return new WaitUntil(() => dialogs[0].UpdateDialog());
 
         Snake.SnakeMovingBtn();
+        Fox.SnakeMovingBtn();
         yield return new WaitForSeconds(5);
         yield return new WaitUntil(() => Snake.isMoving == false);
         yield return new WaitUntil(() => dialogs[1].UpdateDialog());
         
         yield return new WaitUntil(() => GameManager.Instance.Pilot == true);
         yield return new WaitUntil(() => dialogs[2].UpdateDialog());
-
+        Fox.FoxReturnBtn();
         yield return new WaitUntil(() => isNearPilot == true);
         yield return new WaitUntil(() => dialogs[3].UpdateDialog());
         
+        light.SetActive(true);
         yield return new WaitUntil(() => bottle == true);
         yield return new WaitUntil(() => dialogs[4].UpdateDialog());
         

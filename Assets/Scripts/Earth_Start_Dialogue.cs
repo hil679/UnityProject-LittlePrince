@@ -7,7 +7,8 @@ public class Earth_Start_Dialogue : MonoBehaviour
 
     [SerializeField] private DialogueSystem[] dialogs;
     [SerializeField] private GameObject tutorialUI;
-    [SerializeField] private GameObject unicornLocation;
+    [SerializeField] private GameObject unicorn;
+    [SerializeField] private GameObject portal;
     private static Earth_Start_Dialogue _instance;
 
     public static Earth_Start_Dialogue Instance
@@ -28,9 +29,10 @@ public class Earth_Start_Dialogue : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitUntil(() => dialogs[0].UpdateDialog());
+        unicorn.SetActive(true);
         
-        //yield return new WaitUntil(()=>unicornLocation.detected)
         yield return new WaitUntil(() =>  dialogs[1].UpdateDialog());
-        tutorialUI.SetActive(true);
+        portal.SetActive(true);
+        
     }
 }

@@ -48,6 +48,13 @@ public class FoxMove : MonoBehaviour
     public void SnakeMovingBtn()
     {
         isMoving = true;
+        moveAni.SetTrigger("Moving");
+    }
+
+    public void FoxReturnBtn()
+    {
+        secondMove = true;
+        moveAni.SetTrigger("Moving");
     }
 
     private void MovePath()

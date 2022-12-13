@@ -20,7 +20,7 @@ public class Detect : MonoBehaviour
     {
         if (other.gameObject.tag == "Pilot_water")
         {
-            // UI
+            Desert_Dialogue.Instance.bottle = true;
         }
     }
 }
