@@ -159,7 +159,7 @@ public class DialogueSystem : MonoBehaviour
     {
         int index = 0;
         isTypingEffect = true;
-        VRUtils.Instance.PlaySpatialClipAt(TTSs[currentDialogIndex], transformRef.transform.position, 1.0f, 1.0f, 0, MixerName);
+        VRUtils.Instance.PlaySpatialClipAt(TTSs[currentDialogIndex], transform.position, 1.0f, 1.0f, 0, MixerName);
         while (index <= Dialogs[currentDialogIndex].dialogue.Length)
         {
             speakers[currentSpeakerIndex].textDialogue.text = Dialogs[currentDialogIndex].dialogue.Substring(0, index);

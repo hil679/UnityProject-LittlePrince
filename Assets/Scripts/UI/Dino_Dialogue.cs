@@ -56,27 +56,21 @@ public class Dino_Dialogue : MonoBehaviour
         if (Dinosaur_UImanager.Instance.Successed)
         {
             VRUtils.Instance.PlaySpatialClipAt(SuccessSound, RewardUI.transform.position, 1f, 1f, 0f, MixerName);
-            Debug.Log("11");
             yield return new WaitUntil(() => dialog[1].UpdateDialog());
-            Debug.Log("22");
         }
         else if (Dinosaur_UImanager.Instance.Failed)
-            Debug.Log("33");
-        yield return new WaitUntil(() => dialog[2].UpdateDialog());
-            Debug.Log("44");
+            yield return new WaitUntil(() => dialog[2].UpdateDialog());
         //보상 선택
         RewardUI.SetActive(true);
         yield return new WaitUntil(() => (PlayerPrefs.GetString("Dino_Reward") != ""));
-            Debug.Log("55"); 
         yield return new WaitUntil(() => dialog[3].UpdateDialog());
-            Debug.Log("66");
         
         //대화 끝난 후 자신감 상승, 이동 튜토리얼 진행
         yield return new WaitForSeconds(2f);
         GameManager.Instance.Confidence(0.5f);
         Unicorn.SetActive(true);
         Portal.SetActive(true);
-        
+        yield break;
     }
 
     // Update is called once per frame
