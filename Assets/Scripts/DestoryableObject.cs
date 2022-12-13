@@ -101,7 +101,7 @@ public class DestoryableObject : MonoBehaviour
         //총알과 부딪힌 경우, 땅과 부딪힌 경우
 
         //Debug.Log("hit item name: "+ other.gameObject.name);
-        //Debug.Log("StarDestoryed");
+        Debug.Log(other.gameObject.name);
    
 
         if(other.gameObject.name == "floor" || other.gameObject.name == "Terrain" || other.gameObject.tag =="Wood")
