@@ -29,14 +29,16 @@ public class Dinosaur_UImanager : MonoBehaviour
     int MissCount = 0;
     public bool Successed = false;
 
+    public Slider slider;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+         slider.value =0;
         Text_HitCount.text = HitCount.ToString();
-        Text_MissCount.text = MissCount.ToString();
+        //Text_MissCount.text = MissCount.ToString();
     }
 
     public void HitFunction()
@@ -54,7 +56,8 @@ public class Dinosaur_UImanager : MonoBehaviour
     public void MissFunction()
     {
         MissCount++;
-        Text_MissCount.text = MissCount.ToString();
+        slider.value = MissCount;
+        //Text_MissCount.text = MissCount.ToString();
         //Debug.Log("운석 파괴 실패:"+MissCount);
         if(MissCount == MissionFailureCount && Text_Mission.text == "미션 스타트")
         {
