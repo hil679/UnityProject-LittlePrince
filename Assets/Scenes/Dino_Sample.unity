@@ -5722,7 +5722,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094187845}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc39384ecbf0a1f41881736893e14af0, type: 3}
   m_Name: 
@@ -12215,6 +12215,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3696856878597835988, guid: b2defb85b986ab243a8c5252fe34a93a,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696856878597835988, guid: b2defb85b986ab243a8c5252fe34a93a,
+        type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -2318438306662043806, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
@@ -12291,6 +12296,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2318438306662043806, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
         type: 2}
+    - target: {fileID: 5676588141486020023, guid: b2defb85b986ab243a8c5252fe34a93a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5676588142427295836, guid: b2defb85b986ab243a8c5252fe34a93a,
         type: 3}
       propertyPath: MixerName
@@ -14285,6 +14295,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2318438306662043806, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
         type: 2}
+    - target: {fileID: 3814001877050209410, guid: 22fc588c43c2f7146ab5990f2c2848cd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7689196106450287864, guid: 22fc588c43c2f7146ab5990f2c2848cd,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -18261,6 +18276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5201340607583337613, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5201340607583337618, guid: 2198be4c178ff874f8f9ce89297d7a44,
         type: 3}
       propertyPath: LookAt
@@ -18295,6 +18315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675397467377503056, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7830177104006809010, guid: 2198be4c178ff874f8f9ce89297d7a44,
         type: 3}
