@@ -46,7 +46,38 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetString("Desert_Reward", "");
             PlayerPrefs.SetFloat("Confidence", 0.0f);
         }
+        else if (SceneManager.GetActiveScene().name == "FinalScene")
+        {
+            GameObject reward1 = GameObject.Find("Dinosour");
+            GameObject reward2 = GameObject.Find("Meteor");
+            GameObject reward3 = GameObject.Find("Aurora");
+            GameObject reward4 = GameObject.Find("Oasis");
+            GameObject reward5 = GameObject.Find("Plane");
+            if (PlayerPrefs.GetString("Dino_Reward", "") == "Reward1")
+            {
+                reward2.SetActive(false);
+            }
+            else if (PlayerPrefs.GetString("Dino_Reward", "") == "Reward2")
+            {
+                reward1.SetActive(false);
+            }
 
+            if (PlayerPrefs.GetString("Desert_Reward", "") == "Reward1")
+            {
+                reward4.SetActive(false);
+                reward5.SetActive(false);
+            }
+            else if (PlayerPrefs.GetString("Desert_Reward", "") == "Reward2")
+            {
+                reward3.SetActive(false);
+                reward5.SetActive(false);
+            }
+            else if (PlayerPrefs.GetString("Desert_Reward", "") == "Reward3")
+            {
+                reward3.SetActive(false);
+                reward4.SetActive(false);
+            }
+        }
         _confidenceSlider.value = PlayerPrefs.GetFloat("Confidence", 0.0f);
         
 

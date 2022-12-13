@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Earth_plane.unity
     guid: 127363c018e0f4a2d8f9bff2be3544d3
   - enabled: 1
+    path: Assets/Scenes/Dino_Sample.unity
+    guid: 187156184db155840948703f3bd0cb76
+  - enabled: 1
     path: Assets/Scenes/PathInDesert_Sample.unity
     guid: 3ef1488d1fe044eebba799cac9ae4574
   - enabled: 1
-    path: Assets/Scenes/Dino_Sample.unity
-    guid: 187156184db155840948703f3bd0cb76
+    path: Assets/Scenes/UniverseDesertToEarth.unity
+    guid: 937f3cb083b7b402bb39aceb213b1f4e
+  - enabled: 1
+    path: Assets/Scenes/UniverseDinosourToDesert.unity
+    guid: 80be38adc13c5485880b9d6b78885fab
+  - enabled: 1
+    path: Assets/Scenes/UniverseEarthToDinosour.unity
+    guid: 0e4aee4cc90574a4097110fdfcf8d534
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: edaf359855195d740ac3a7a6b152e2af
