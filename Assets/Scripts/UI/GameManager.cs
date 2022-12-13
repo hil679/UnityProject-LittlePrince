@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 public class GameManager : MonoBehaviour
 {
+    public bool Pilot = false;
     
     private static GameManager _instance;
     public static GameManager Instance

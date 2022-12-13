@@ -7,6 +7,8 @@ TagManager:
   - FxTemporaire
   - Star
   - Water
+  - Teleport
+  - Pilot_water
   layers:
   - Default
   - TransparentFX
