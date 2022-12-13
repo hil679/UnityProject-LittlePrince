@@ -44,9 +44,11 @@ public class Dino_Dialogue : MonoBehaviour
         RewardUI.SetActive(true);
         yield return new WaitUntil(() => (PlayerPrefs.GetString("Dino_Reward") != ""));
         yield return new WaitUntil(() => dialog[2].UpdateDialog());
-        //대화 끝난 후 자신감 상승, 이동 튜토리얼 진행
-        GameManager.Instance.Confidence(0.5f);
         
+        //대화 끝난 후 자신감 상승, 이동 튜토리얼 진행
+        yield return new WaitForSeconds(2f);
+        GameManager.Instance.Confidence(0.5f);
+        yield break;
     }
 
     // Update is called once per frame

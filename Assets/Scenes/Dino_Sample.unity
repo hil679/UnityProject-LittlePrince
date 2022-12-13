@@ -4209,6 +4209,12 @@ CapsuleCollider:
   m_Height: 3.8745012
   m_Direction: 1
   m_Center: {x: 0.015810847, y: 1.886045, z: -0.12030296}
+--- !u!1 &718259607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7830177104967717990, guid: 2198be4c178ff874f8f9ce89297d7a44,
+    type: 3}
+  m_PrefabInstance: {fileID: 7830177103838006754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &743594193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8675139839736257797, guid: f32343f86a163c146b29115ffec84f79,
@@ -12242,6 +12248,12 @@ CapsuleCollider:
   m_Height: 0.2682441
   m_Direction: 1
   m_Center: {x: -0.0449892, y: 0.09766078, z: 0.0001296997}
+--- !u!1 &1332562307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7830177105454624823, guid: 2198be4c178ff874f8f9ce89297d7a44,
+    type: 3}
+  m_PrefabInstance: {fileID: 7830177103838006754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1338463348 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4003628181279615654, guid: 83b9c4e64d8300848bad6e9d524178d4,
@@ -17901,10 +17913,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1833098538277767524, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: SliderImage1
+      value: 
+      objectReference: {fileID: 1332562307}
+    - target: {fileID: 1833098538277767524, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: SliderImage2
+      value: 
+      objectReference: {fileID: 718259607}
+    - target: {fileID: 2584563961106109244, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: fadeInTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584563961106109244, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: fadeOutTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2742214979717066215, guid: 2198be4c178ff874f8f9ce89297d7a44,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942216930545339186, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: fadeInTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942216930545339186, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: fadeOutTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868624781704929249, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: fadeInTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868624781704929249, guid: 2198be4c178ff874f8f9ce89297d7a44,
+        type: 3}
+      propertyPath: fadeOutTime
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5201340607583337612, guid: 2198be4c178ff874f8f9ce89297d7a44,
         type: 3}
