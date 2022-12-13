@@ -9,6 +9,7 @@ TagManager:
   - Water
   - Teleport
   - Pilot_water
+  - Wood
   layers:
   - Default
   - TransparentFX
