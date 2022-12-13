@@ -92249,6 +92249,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6813231611603224233, guid: 545dfc943cf1b634f8d4bedc61f133d7,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 147dc4a02e8a13f4ebaa675019270564, type: 3}
     - target: {fileID: 6813231611603224235, guid: 545dfc943cf1b634f8d4bedc61f133d7,
         type: 3}
       propertyPath: m_Name
@@ -92256,28 +92261,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 545dfc943cf1b634f8d4bedc61f133d7, type: 3}
---- !u!1 &5680840632672011829 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6813231611603224235, guid: 545dfc943cf1b634f8d4bedc61f133d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1178553837185122462}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &2965234709240024092
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5680840632672011829}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!4 &5680840632672011830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6813231611603224232, guid: 545dfc943cf1b634f8d4bedc61f133d7,
