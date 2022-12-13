@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         if (scene.name == "Dino_Sample")
         {
             PlayerPrefs.SetString("Dino_Reward", clickObject.name);
-            Debug.Log("Dino Reward Saved");
+            Debug.Log(PlayerPrefs.GetString("Dino_Reward"));
         }
         else if (scene.name == "PathInDesert_Sample")
         {
