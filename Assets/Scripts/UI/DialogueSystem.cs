@@ -7,6 +7,8 @@ using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using BNG;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -29,13 +31,54 @@ public class DialogueSystem : MonoBehaviour
     private void Awake()
     {
         int index = 0;
-        for (int i = 0; i < dialogScript.Dino.Count; ++i)
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Earth_plane")
         {
-            if (dialogScript.Dino[i].branch == branch)
+            for (int i = 0; i < dialogScript.Earth.Count; ++i)
             {
-                Dialogs[index].name = dialogScript.Dino[i].name;
-                Dialogs[index].dialogue = dialogScript.Dino[i].Dialog;
-                index++;
+                if (dialogScript.Earth[i].branch == branch)
+                {
+                    Dialogs[index].name = dialogScript.Earth[i].name;
+                    Dialogs[index].dialogue = dialogScript.Earth[i].Dialog;
+                    index++;
+                }
+            }
+        }
+        else if (scene.name == "Dino_Sample")
+        {
+            for (int i = 0; i < dialogScript.Dino.Count; ++i)
+            {
+                if (dialogScript.Dino[i].branch == branch)
+                {
+                    Dialogs[index].name = dialogScript.Dino[i].name;
+                    Dialogs[index].dialogue = dialogScript.Dino[i].Dialog;
+                    index++;
+                }
+            }
+        }
+        else if (scene.name == "PathInDesert_Sample")
+        {
+            for (int i = 0; i < dialogScript.Desert.Count; ++i)
+            {
+                if (dialogScript.Desert[i].branch == branch)
+                {
+                    Dialogs[index].name = dialogScript.Desert[i].name;
+                    Dialogs[index].dialogue = dialogScript.Desert[i].Dialog;
+                    index++;
+                }
+            }
+        }
+        
+        else if (scene.name == "FinalScene")
+        {
+            for (int i = 0; i < dialogScript.Earth_Ending.Count; ++i)
+            {
+                if (dialogScript.Earth_Ending[i].branch == branch)
+                {
+                    Dialogs[index].name = dialogScript.Earth_Ending[i].name;
+                    Dialogs[index].dialogue = dialogScript.Earth_Ending[i].Dialog;
+                    index++;
+                }
             }
         }
     }

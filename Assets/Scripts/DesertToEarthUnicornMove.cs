@@ -29,6 +29,6 @@ public class DesertToEarthUnicornMove : MonoBehaviour
     private void OnTriggerEnter()
     {
         Debug.Log("Collide");
-        loader.LoadScene("Earth_plane");
+        loader.LoadScene("FinalScene");
     }
 }

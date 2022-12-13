@@ -5,7 +5,6 @@ using UnityEngine;
 public class Water_Detected : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject PilotManager;
     void Start()
     {
         
@@ -21,7 +20,7 @@ public class Water_Detected : MonoBehaviour
 		if (other.gameObject.tag == "Water")
 		{
             Debug.Log("Water");
-            PilotManager.GetComponent<GameManager>().Pilot = true;
+            GameManager.Instance.Pilot = true;
             //Debug.Log(PilotManager.GetComponent<GameManager>().Pilot);
             GameObject tutorialUI = GameObject.Find("WaterInterUI");
             tutorialUI.SetActive(false);

@@ -9,12 +9,13 @@ public class EarthToDinoUnicornMove : MonoBehaviour
     NavMeshAgent navMeshAgent;
     //[SerializeField]
     public Transform target;
+    private BNG.SceneLoader loader;
 
     void Start ()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
 		navMeshAgent.SetDestination (target.position);
-		
+		loader = GetComponent<BNG.SceneLoader>();
     }
 
     private float speed = 0.5f;
@@ -30,7 +31,7 @@ public class EarthToDinoUnicornMove : MonoBehaviour
 
     private void OnTriggerEnter()
     {
-	    SceneManager.LoadScene("Dino_Sample");
+	    loader.LoadScene("Dino_Sample");
     }
 	
 }

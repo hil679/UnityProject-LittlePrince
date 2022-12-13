@@ -39,6 +39,7 @@ public class SnakeMove : MonoBehaviour
 
     public void SnakeMovingBtn()
     {
+        moveAni.SetTrigger("Moving");
         isMoving = true;
     }
 
@@ -58,6 +59,8 @@ public class SnakeMove : MonoBehaviour
             {
                 isMoving = false;
                 moveAni.SetTrigger("Stopped");
+                GameObject tutorialUI = GameObject.Find("WaterInterUI");
+                tutorialUI.SetActive(true);
             }
             else
             {

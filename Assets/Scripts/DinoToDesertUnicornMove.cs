@@ -10,6 +10,7 @@ public class DinoToDesertUnicornMove : MonoBehaviour
     NavMeshAgent navMeshAgent;
     //[SerializeField]
     public Transform target;
+    private BNG.SceneLoader loader;
     
 
 
@@ -17,6 +18,7 @@ public class DinoToDesertUnicornMove : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
 		navMeshAgent.SetDestination (target.position);
+		loader = GetComponent<BNG.SceneLoader>();
 		
     }
 
@@ -30,7 +32,8 @@ public class DinoToDesertUnicornMove : MonoBehaviour
 
     private void OnTriggerEnter()
     {
-	    SceneManager.LoadScene("PathInDesert_Sample");//씬이름 바꾸면 같이 바꿔줘야 함 
+	    loader.LoadScene("PathInDesert_Sample");
+		//씬이름 바꾸면 같이 바꿔줘야 함 
     }
 	
 }
