@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Water_Detected : MonoBehaviour
 {
+	[SerializeField] private GameObject tutorialUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,6 @@ public class Water_Detected : MonoBehaviour
             Debug.Log("Water");
             GameManager.Instance.Pilot = true;
             //Debug.Log(PilotManager.GetComponent<GameManager>().Pilot);
-            GameObject tutorialUI = GameObject.Find("WaterInterUI");
             tutorialUI.SetActive(false);
 		}
 	}

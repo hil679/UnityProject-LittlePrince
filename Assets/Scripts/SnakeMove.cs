@@ -9,6 +9,7 @@ public class SnakeMove : MonoBehaviour
     [SerializeField] Transform[] TargetPos;
     [SerializeField] float speed = 1f;
     [SerializeField] float RotateSpeed = 1f;
+    [SerializeField] private GameObject tutorialUI;
     int TargetNum = 0;
     public bool isMoving = false;
     private Vector3 NewTargetPos;
@@ -59,7 +60,6 @@ public class SnakeMove : MonoBehaviour
             {
                 isMoving = false;
                 moveAni.SetTrigger("Stopped");
-                GameObject tutorialUI = GameObject.Find("WaterInterUI");
                 tutorialUI.SetActive(true);
             }
             else

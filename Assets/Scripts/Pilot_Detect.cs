@@ -18,13 +18,7 @@ public class Pilot_Detect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isPilot = GameManager.Instance.Pilot;
-
-        if (isPilot)
-        {
-            Light.SetActive(true);
-            Debug.Log("Light On");
-        }
+        
     }
 
     private void OnCollisionEnter(Collision collision)
