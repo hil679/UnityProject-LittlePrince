@@ -19,6 +19,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private bool isAutoStart = true;
     [SerializeField] private AudioClip[] TTSs;
     [SerializeField] private AudioMixerGroup MixerName;
+    [SerializeField] private GameObject transformRef;
 
     [SerializeField] private bool isFirst = false;
     private int currentDialogIndex = -1;
@@ -89,7 +90,6 @@ public class DialogueSystem : MonoBehaviour
         {
             SetActiveObjects(speakers[i], false);
             
-            speakers[i].characterImage.gameObject.SetActive(true);
         }
     }
     // Update is called once per frame
@@ -125,7 +125,6 @@ public class DialogueSystem : MonoBehaviour
                 for (int i = 0; i < speakers.Length; i++)
                 {
                     SetActiveObjects(speakers[i], false);
-                    speakers[i].characterImage.gameObject.SetActive(false);
                 }
 
                 return true;
@@ -153,10 +152,7 @@ public class DialogueSystem : MonoBehaviour
         speaker.textDialogue.gameObject.SetActive(visible);
         
         speaker.objectArrow.SetActive(false);
-
-        Color color = speaker.characterImage.color;
-        color.a = visible == true ? 1 : 0;
-        speaker.characterImage.color = color;
+        
     }
     
     private IEnumerator OnTypingText()
@@ -181,7 +177,6 @@ public class DialogueSystem : MonoBehaviour
 [System.Serializable]
 public struct Speaker
 {
-    public Image characterImage;
     public Image imageDialogue;
     public TextMeshProUGUI textName;
     public TextMeshProUGUI textDialogue;

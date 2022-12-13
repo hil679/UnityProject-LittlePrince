@@ -34,6 +34,7 @@ public class Desert_Dialogue : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitUntil(() => dialogs[0].UpdateDialog());
+
         Snake.SnakeMovingBtn();
         yield return new WaitForSeconds(5);
         yield return new WaitUntil(() => Snake.isMoving == false);
