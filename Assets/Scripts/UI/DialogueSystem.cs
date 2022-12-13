@@ -61,7 +61,7 @@ public class DialogueSystem : MonoBehaviour
             isFirst = false;
         }
 
-        if (InputBridge.Instance.RightTriggerDown)
+        if (InputBridge.Instance.RightTriggerDown || Input.GetMouseButtonDown(0))
         {
             if (isTypingEffect == true)
             {
