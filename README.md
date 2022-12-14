@@ -10,9 +10,11 @@
 
 ![image-8.png](./image-8.png)
 
+# 결과물 구성도
+![image-2.png](./image-2.png)
 
-
-
+# Flow
+![image-1.png](./image-1.png)
 
 
 
