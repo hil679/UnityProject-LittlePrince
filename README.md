@@ -16,8 +16,26 @@
 # Flow
 ![image-1.png](./image-1.png)
 
+# 콘텐츠 설명
+|Scene|explanation1| explanation2
+|:---------:|:---------:|:---------:|
+처음 | ![image-3.png](./image-3.png) | ![image-4.png](./image-4.png)
 
+|Scene|explanation
+|:---------:|:---------:|
+이동 | ![image-5.png](./image-5.png)
 
+|Scene|explanation1| explanation2
+|:---------:|:---------:|:---------:|
+공룡별 | ![image-6.png](./image-6.png) | ![image-7.png](./image-7.png)
+
+|Scene|explanation1| explanation2
+|:---------:|:---------:|:---------:|
+사막별 | ![image-9.png](./image-9.png) | ![image-10.png](./image-10.png)
+
+|Scene|explanation
+|:---------:|:---------:|
+엔딩 | ![image-11.png](./image-11.png)
 
 
 
