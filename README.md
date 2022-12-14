@@ -6,39 +6,39 @@
 `플렛폼` | VR스토리북   
 `장르` | 롤플레이, 아케이드, 체감형 콘텐츠   
 `대상` | 5~10세   
-`설명` | ![image.png](./image.png)
+`설명` | ![image.png](READMEImage/image.png)
 
-![image-8.png](./image-8.png)
+![image-8.png](READMEImage/image-8.png)
 
 # 결과물 구성도
-![image-2.png](./image-2.png)
+![image-2.png](READMEImage/image-2.png)
 
 # Flow
-![image-1.png](./image-1.png)
+![image-1.png](READMEImage/image-1.png)
 
 # 콘텐츠 설명
 |Scene|explanation1| explanation2
 |:---------:|:---------:|:---------:|
-처음 | ![image-3.png](./image-3.png) | ![image-4.png](./image-4.png)
+처음 | ![image-3.png](READMEImage/image-3.png) | ![image-4.png](READMEImage/image-4.png)
 
 |Scene|explanation
 |:---------:|:---------:|
-이동 | ![image-5.png](./image-5.png)
+이동 | ![image-5.png](READMEImage/image-5.png)
 
 |Scene|explanation1| explanation2
 |:---------:|:---------:|:---------:|
-공룡별 | ![image-6.png](./image-6.png) | ![image-7.png](./image-7.png)
+공룡별 | ![image-6.png](READMEImage/image-6.png) | ![image-7.png](READMEImage/image-7.png)
 
 |Scene|explanation1| explanation2
 |:---------:|:---------:|:---------:|
-사막별 | ![image-9.png](./image-9.png) | ![image-10.png](./image-10.png)
+사막별 | ![image-9.png](READMEImage/image-9.png) | ![image-10.png](READMEImage/image-10.png)
 
 |Scene|explanation
 |:---------:|:---------:|
-엔딩 | ![image-11.png](./image-11.png)
+엔딩 | ![image-11.png](READMEImage/image-11.png)
 
 # 기대 효과
-![image-12.png](./image-12.png)
+![image-12.png](READMEImage/image-12.png)
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
