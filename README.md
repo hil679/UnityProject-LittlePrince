@@ -37,7 +37,10 @@
 |:---------:|:---------:|
 엔딩 | ![image-11.png](./image-11.png)
 
+# 기대 효과
+![image-12.png](./image-12.png)
 
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 # 프로젝트 세팅 안내
 
