@@ -6,7 +6,7 @@
 `플렛폼` | VR스토리북   
 `장르` | 롤플레이, 아케이드, 체감형 콘텐츠   
 `대상` | 5~10세   
-`설명` | ![image-7.png](./image-7.png)
+`설명` | ![image.png](./image.png)
 
 ![image-8.png](./image-8.png)
 
