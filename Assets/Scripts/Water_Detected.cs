@@ -20,7 +20,7 @@ public class Water_Detected : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Water")
 		{
-            Debug.Log("Water");
+
             GameManager.Instance.Pilot = true;
             //Debug.Log(PilotManager.GetComponent<GameManager>().Pilot);
             tutorialUI.SetActive(false);

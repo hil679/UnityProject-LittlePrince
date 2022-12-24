@@ -15721,8 +15721,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3814001877043367786, guid: 22fc588c43c2f7146ab5990f2c2848cd,
         type: 3}
+      propertyPath: GunShotVolume
+      value: 0.505
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814001877043367786, guid: 22fc588c43c2f7146ab5990f2c2848cd,
+        type: 3}
       propertyPath: MaxInternalAmmo
       value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814001877043367786, guid: 22fc588c43c2f7146ab5990f2c2848cd,
+        type: 3}
+      propertyPath: EmptySoundVolume
+      value: 0.762
       objectReference: {fileID: 0}
     - target: {fileID: 3814001877043367786, guid: 22fc588c43c2f7146ab5990f2c2848cd,
         type: 3}

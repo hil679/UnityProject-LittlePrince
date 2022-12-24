@@ -46,6 +46,7 @@ public class Desert_Dialogue : MonoBehaviour
         yield return new WaitUntil(() => GameManager.Instance.Pilot == true);
         yield return new WaitUntil(() => dialogs[2].UpdateDialog());
         Fox.FoxReturnBtn();
+        Debug.Log("asdf");
         yield return new WaitUntil(() => isNearPilot == true);
         yield return new WaitUntil(() => dialogs[3].UpdateDialog());
         
