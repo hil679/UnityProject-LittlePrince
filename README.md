@@ -6,41 +6,50 @@
 `플렛폼` | VR스토리북   
 `장르` | 롤플레이, 아케이드, 체감형 콘텐츠   
 `대상` | 5~10세   
-`설명` | ![image.png](READMEImage/image.png)
+`설명` | B-612라는 행성에서 외롭게 지내던 어린 왕자는 어느 날 다른 행성의 구조 요청을 듣게 되고 친구 여우와 함께 위험에 빠진 행성을 구하기 위한 모험을 떠나며 시작된다. 공룡별과 사막별에서 다른 캐릭터들에게 도움을 주며 인터렉션이 진행된다. 미션이 수행되면 보상을 얻는다.
 
-![image-8.png](READMEImage/image-8.png)
+
+![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/b87e4b62-7e64-4c0d-a6a8-ad5d9706c71c)
+
 
 # 결과물 구성도
-![image-2.png](READMEImage/image-2.png)
+![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/b0c2783f-f0e6-4309-bbe5-a605ec2466e1)
+
 
 # Flow
-![image-1.png](READMEImage/image-1.png)
+![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/2817b78c-d1fd-49d5-886b-1e522e522935)
+
 
 # 콘텐츠 설명
 |Scene|explanation1| explanation2
 |:---------:|:---------:|:---------:|
-처음 | ![image-3.png](READMEImage/image-3.png) | ![image-4.png](READMEImage/image-4.png)
+처음 | ![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/e97f3b81-cc60-446d-8b7e-7ba8070d2296) | ![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/58eea391-3b4d-45ef-a7eb-8ad875b8d2bc)
+
 
 |Scene|explanation
 |:---------:|:---------:|
-이동 | ![image-5.png](READMEImage/image-5.png)
+이동 | ![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/3981bfe4-a129-4c16-a5fc-4923c065de77)
+
 
 |Scene|explanation1| explanation2
 |:---------:|:---------:|:---------:|
-공룡별 | ![image-6.png](READMEImage/image-6.png) | ![image-7.png](READMEImage/image-7.png)
+공룡별 | ![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/5249ba01-4c07-47f5-bd8d-007163bd9cad) | ![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/dc77b754-f3b0-4e37-ad90-b5bb607f26f6)
+
 
 |Scene|explanation1| explanation2
 |:---------:|:---------:|:---------:|
-사막별 | ![image-9.png](READMEImage/image-9.png) | ![image-10.png](READMEImage/image-10.png)
+사막별 | ![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/0fc45f9b-8285-4cde-9194-dd325980b3b4) | ![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/3c40113a-119a-4c32-852c-13da3c753e29)
+
 
 |Scene|explanation
 |:---------:|:---------:|
-엔딩 | ![image-11.png](READMEImage/image-11.png)
+엔딩 | ![image](https://github.com/hil679/UnityProject-LittlePrince/assets/121854089/eae1aa8c-5105-4442-b9b9-ce4f2e8e6a22)
+
 
 # 기대 효과
 ![image-12.png](READMEImage/image-12.png)
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/>
 
 # 프로젝트 세팅 안내
 
